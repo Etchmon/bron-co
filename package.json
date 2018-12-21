@@ -1,0 +1,28 @@
+{
+  "name": "bron-co",
+  "version": "1.0.0",
+  "description": "Client Organizer",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Etchmon/bron-co.git"
+  },
+  "keywords": [
+    "Client",
+    "Organizer"
+  ],
+  "author": "Etchmon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Etchmon/bron-co/issues"
+  },
+  "homepage": "https://github.com/Etchmon/bron-co#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}
