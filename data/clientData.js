@@ -2,4 +2,4 @@ var clientArray = [
     
 ];
 
-module.exports = tableArray;
+module.exports = clientArray;
