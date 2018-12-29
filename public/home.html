@@ -17,6 +17,31 @@
                 <label>Name</label>
                 <input type="text" class="form-control" id="client-name">
             </div>
+
+            <div class="form-group">
+                <label>Status:</label><br>
+                <input type="radio" name="status" value="in-progess">in-progress<br>
+                <input type="radio" name="status" value="pending" checked>pending<br>
+                <input type="radio" name="status" value="incomplete">incomplete<br>
+                <input type="radio" name="status" value="complete">complete<br>
+                <input type="radio" name="status" value="subscription start">subscription start<br>
+                <input type="radio" name="status" value="cancelled">cancelled
+            </div>
+            <div>
+                <label>Brand or Person?</label>
+                <input type="radio" name="brand" value="brand">Brand<br>
+                <input type="radio" name="person" value="person">Person<br>
+            </div>
+            <div>
+                <label>Return Client?</label>
+                <input type="radio" name="yes" value="ues">Yes<br>
+                <input type="radio" name="no" value="no">No<br>
+            </div>
+            <div>
+                <label>How was contact initiated?</label>
+                <input type="text" name="contact" id="contact" style="height:40px"><br>
+            </div>
+                
         </form>
     </div>
 
