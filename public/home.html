@@ -144,10 +144,32 @@
         var newClient = {
             name: $("#client-name").val().trim(),
             status: $("input[name='status']:checked").val(),
+            brand: $("input[name='brand']:checked").val(),
+            return: $("input[name='return']:checked").val(),
+            contact: $("input[name='contact']:checked").val(),
+            special: $("input[name='special']:checked").val(),
+            specialDescription: $("#description1").val(),
+            consult: $("input[name='consult']:checked").val(),
+            consultDescription: $("#description2").val(),
+            scheduled: $("input[name='scheduled']:checked").val(),
+            agreement: $("input[name='agreement']:checked").val(),
+            depositAmount: $("#depositAmount").val(),
+            totalPrice: $("#totalPrice").val(),
+            signed: $("input[name='signed']:checked").val(),
+            totalBySessionDate: $("#totalBySessionDate").val(),
+            shotList: $("input[name='shotList']:checked").val(),
+            lenses: $("#lenses").val(),
+            rental: $("input[name='rental']:checked").val(),
+            complete: $("input[name='complete']:checked").val(),
+            sdhd: $("input[name='sdhd']:checked").val(),
+            lr: $("input[name='lr']:checked").val(),
+            preview: $("input[name='preview']:checked").val(),
+            final: $("input[name='final']:checked").val()
+
         }
 
         var status = $("input[name='brand']:checked").val();
-        console.log(status);
+        console.log(newClient);
     })
 
 </script>
