@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>BRONCO</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 <body>
     <nav>
@@ -15,121 +16,138 @@
         <form>
             <div class="form-group">
                 <label>Name</label>
-                <input type="text" class="form-control" id="client-name">
+                <input type="text" id="client-name">
             </div>
 
             <div class="form-group">
                 <label>Status:</label><br>
                 <input type="radio" name="status" value="in-progess">in-progress<br>
-                <input type="radio" name="status" value="pending" checked>pending<br>
+                <input type="radio" name="status" value="pending" >pending<br>
                 <input type="radio" name="status" value="incomplete">incomplete<br>
                 <input type="radio" name="status" value="complete">complete<br>
                 <input type="radio" name="status" value="subscription start">subscription start<br>
                 <input type="radio" name="status" value="cancelled">cancelled
             </div>
-            <div>
+            <div class="form-group">
                 <label>Brand or Person?</label>
                 <input type="radio" name="brand" value="brand">Brand<br>
-                <input type="radio" name="person" value="person">Person<br>
+                <input type="radio" name="brand" value="person">Person<br>
             </div>
-            <div>
+            <div class="form-group">
                 <label>Return Client?</label>
-                <input type="radio" name="yes" value="ues">Yes<br>
-                <input type="radio" name="no" value="no">No<br>
+                <input type="radio" name="return" value="ues">Yes<br>
+                <input type="radio" name="return" value="no">No<br>
             </div>
-            <div>
+            <div class="form-group">
                 <label>How was contact initiated?</label>
                 <input type="text" name="contact" id="contact" style="height:40px"><br>
             </div>
-            <div>
+            <div class="form-group">
                 <label>Special Offer?</label>
-                <input type="radio" value="yes">Yes<br>
-                <input type="radio" value="no">No<br>
+                <input type="radio" name="special" value="yes">Yes<br>
+                <input type="radio" name="special" value="no">No<br>
                 <input type="text" id="description1"><br>
             </div>
-            <div>
+            <div class="form-group">
                 <label>Consultation Scheduled?</label>
-                <input type="radio" value="yes">Yes<br>
-                <input type="radio" value="no">No<br>
+                <input type="radio" name="consult" value="yes">Yes<br>
+                <input type="radio" name="consult" value="no">No<br>
                 <input type="text" id="description2"><br>
             </div>
-            <div>
+            <div class="form-group">
                 <label>Session Scheduled?</label>
-                <input type="radio" value="yes"><br>
-                <input type="radio" value="no"><br>
+                <input type="radio" name="scheduled" value="yes"><br>
+                <input type="radio" name="scheduled" value="no"><br>
                 <input type="text" id="decscription3"><br>
             </div>
-            <div>
+            <div class="form-group">
                 <label>Agreement Delivered?</label>
-                <input type="radio" value="yes">Yes<br>
-                <input type="radio" value="no">No<br>
+                <input type="radio" name="agreement" value="yes">Yes<br>
+                <input type="radio" name="agreement" value="no">No<br>
                 <input type="text" id="description4"><br>
             </div>
-            <div>
+            <div class="form-group">
                 <label>Deposit Amount Requested?</label>
                 <input type="text" id="depositAmount">
             </div>
-            <div>
+            <div class="form-group">
                 <label>Total Price?</label>
                 <input type="text" id="totalPrice">
             </div>
-            <div>
+            <div class="form-group">
                 <label>Agreement Signed + Deposit Received?</label>
-                <input type="radio" value="yes">Yes<br>
-                <input typ="radio" value="no">No<br>
+                <input type="radio" name="signed" value="yes">Yes<br>
+                <input typ="radio" name="signed" value="no">No<br>
             </div>
-            <div>
+            <div class="form-group">
                 <label>Total Payment Received by Session Date</label>
                 <input type="text" id="totalBySessionDate"><br>
             </div>
-            <div>
+            <div class="form-group">
                 <label>Shot List + Inspo Prep for Session?</label>
-                <input type="radio" value="yes">Yes<br>
-                <input type="radio" value="no">No<br>
+                <input type="radio" name="shotList" value="yes">Yes<br>
+                <input type="radio" nsmr="shotList" value="no">No<br>
                 <input type="text" id="description5"><br>
             </div>
-            <div>
+            <div class="form-group">
                 <label>Lesnses to Use/Rent</label>
                 <input type="text" id="lenses"><br>
             </div>
-            <div>
+            <div class="form-group">
                 <label>Equipment Rental?</label>
-                <input type="radio" value="yes">Yes<br>
-                <input type="radio" value="no">No<br>
+                <input type="radio" name="rental" value="yes">Yes<br>
+                <input type="radio" name="rental" value="no">No<br>
             </div>
-            <div>
+            <div class="form-group">
                 <label>Session Complete?</label>
-                <input type="radio" value="yes">Yes<br>
-                <input type="radio" value="no">No<br>
+                <input type="radio" name="complete" value="yes">Yes<br>
+                <input type="radio" name="complete" value="no">No<br>
                 <input type="text" id="description6"><br>
             </div>
-            <div>
+            <div class="form-group">
                 <label>Photos Moved from SD to HD?</label>
-                <input type="radio" value="yes">Yes<br>
-                <input type="radio" value="no">No<br>
+                <input type="radio" name="sdhd" value="yes">Yes<br>
+                <input type="radio" name="sdhd" value="no">No<br>
                 <input type="text" id="description7"><br>
             </div>
-            <div>
+            <div class="form-group">
                 <label>Photo's in LR?</label>
-                <input type="radio" value="yes">Yes<br>
-                <input type="radio" value="no">No<br>
+                <input type="radio" name="lr" value="yes">Yes<br>
+                <input type="radio" name="lr" value="no">No<br>
                 <input type="text" id="description8"><br>
             </div>
-            <div>
+            <div class="form-group">
                 <label>Preview Delivered?</label>
-                <input type="radio" value="yes">Yes<br>
-                <input type="radio" value="no">No<br>
+                <input type="radio" name="preview" value="yes">Yes<br>
+                <input type="radio" name="preview" value="no">No<br>
                 <input type="text" id="description9"><br>
             </div>
-            <div>
+            <div class="form-group">
                 <label>Final Album Delivered?</label>
-                <input type="radio" value="yes">Yes<br>
-                <input type="radio" value="no">No<br>
+                <input type="radio" name="final" value="yes">Yes<br>
+                <input type="radio" name="final" value="no">No<br>
                 <input type="text" id="description10"><br>
             </div>
-                
+            
+            <input type="submit" id="submit" value="Submit">
         </form>
     </div>
 
 </body>
 </html>
+
+<script tpye="text/javascript">
+    
+    $("#submit").on("click", function(event){
+        event.preventDefault();
+
+        var newClient = {
+            name: $("#client-name").val().trim(),
+            status: $("input[name='status']:checked").val(),
+        }
+
+        var status = $("input[name='brand']:checked").val();
+        console.log(status);
+    })
+
+</script>
