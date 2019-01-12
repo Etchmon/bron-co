@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BRONCO</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/public/css/home.css">
     <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 <style>
@@ -23,13 +22,13 @@
     </nav>
     <div class="clientForm">
         <p>Client form</p>
-        <form>
+        <form action="/submit" method="post">
             <div class="form-group">
                 <label>Name</label>
-                <input type="text" id="client-name">
+                <input type="text" name="clientName" id="client-name">
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>Status:</label><br>
                 <input type="radio" name="status" value="in-progess">in-progress<br>
                 <input type="radio" name="status" value="pending" >pending<br>
@@ -137,7 +136,7 @@
                 <input type="radio" name="final" value="yes">Yes<br>
                 <input type="radio" name="final" value="no">No<br>
                 <input type="text" id="description10"><br>
-            </div>
+            </div> -->
             
             <input type="submit" id="submit" value="Submit">
         </form>
@@ -146,7 +145,7 @@
 </body>
 </html>
 
-<script tpye="text/javascript">
+<!-- <script tpye="text/javascript">
     
     $("#submit").on("click", function(event){
         event.preventDefault();
@@ -200,4 +199,4 @@
         )
     })
 
-</script>
+</script> -->
