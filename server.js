@@ -28,10 +28,16 @@ app.post("/submit", function(req, res) {
 
   db.Client.create(req.body)
   .then(function(dbClient){
-    res.json(dbUser);
+    res.json(dbClient);
   })
   .catch(function(err) {
     res.json(err);
+  });
+});
+
+app.get("/clients", function(req, res) {
+  db.Client.find({}).then(function(dbClient){
+    res.json(dbClient);
   });
 });
 
