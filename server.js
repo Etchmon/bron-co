@@ -38,6 +38,7 @@ app.post("/submit", function(req, res) {
 app.get("/clients", function(req, res) {
   db.Client.find({}).then(function(dbClient){
     res.json(dbClient);
+    
   });
 });
 
