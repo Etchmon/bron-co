@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery.js"></script>
 </head>
+
 <body>
     <Nav>
         <a href="/home"><button>Home</button></a>
@@ -24,15 +27,33 @@
     <div class="button">
         <button type="submit" class="btm-primary" id="searchButton">Search</button>
     </div>
-    
+    <div id="well">
+
+    </div>
+
 </body>
+
 </html>
 <script>
-    $("#searchButton").on("click", function() {
+    $("#searchButton").on("click", function () {
         var query = $("#clientQuery").val().trim();
 
-        query = query.replace(/\s+/g, "").toLowerCase();
+        $.get("/clients", function (data) {
+            console.log(data);
+            for (i = 0; i < data.length; i++) {
+                if (data[i].clientName == query) {
+                    var searchResult = $("<div>");
+                    searchResult.addClass("well");
+                    searchResult.attr("id", "allWell-" + i);
+                    $("#well").append(searchResult);
 
-        
+                    $("#allWell-" + i).append("<br><h2>" + data[i].clientName + "<h2><br>" +
+                        "<p>Status: " + data[i].status + "<p><br>" + "<p>Brand or Person?: " + data[i].brand + "<p><br>" + "<p>Return Client?" + data[i].return + "<p><br>" + "<p>How was contact initiated?: " + data[i].contact + "<p><br>" + "<p>Special Offer?: " + data[i].special + "<p><br>" + "<p>description:  " + data[i].description1 + "<p><br>" + "<p>Consultation Scheduled?: " + data[i].consult + "<p><br>" + "<p>description: " + data[i].description2 + "<p><br>" + "<p>Session Scheduled?: " + data[i].scheduled + "<p><br>" + "<p>description: " + data[i].description3 + "<p><br>" + "<p>Agreement Delivered?: " + data[i].agreement + "<p><br>" + "<p>description: " + data[i].description4 + "<p><br>" + "<p>Deposit Amount Requested?: " + data[i].depositAmount + "<p><br>" + "<p>Total Price: " + data[i].totalPrice + "<p><br>" + "<p>Agreement Signed + Deposit Delivered?: " + data[i].signed + "<p><br>" + "<p>Total Payment Received by Session Date:" + data[i].totalBySessionDate + "<p><br>" + "<p>Shot list + Inspo Prep for Session?: " + data[i].shotList + "<p><br>" + "<p>description" + data[i].description5 + "<p><br>" + "<p>Lenses to Use/Rent: " + data[i].lenses + "<p><br>" + "<p>Equipment Rental?: " + data[i].rental + "<p><br>" + "<p>Session Complete?: " + data[i].complete + "<p><br>" + "<p>description: " + data[i].description6 + "<p><br>" + "<p>Photo's Moved from SD to HD?: " + data[i].sdhd + "<p><br>" + "<p>description: " + data[i].description7 + "<p><br>" + "<p>Photo's in LR?" + data[i].lr + "<p><br>" + "<p>description:" + data[i].description8 + "<p><br>" + "<p>Preview Delivered?: " + data[i].preview + "<p><br>" + "<p>description: " + data[i].description9 + "<p><br>" + "<p>Final Album Delivered?: " + data[i].final + "<p><br>" + "<p>description: " + data[i].description10);
+                }
+                else {
+                    alert("Sorry that Client only exists in your head!")
+                }
+            }
+        })
     })
 </script>

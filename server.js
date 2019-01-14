@@ -2,6 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
+var path = require("path");
 
 var PORT = 3000;
 
@@ -38,7 +39,6 @@ app.post("/submit", function(req, res) {
 app.get("/clients", function(req, res) {
   db.Client.find({}).then(function(dbClient){
     res.json(dbClient);
-    
   });
 });
 
