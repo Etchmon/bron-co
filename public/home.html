@@ -10,7 +10,19 @@
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery.js"></script>
 </head>
+<style>
+    .well{
+        text-align: center;
+    }
 
+    .header{
+        text-align: center;
+    }
+
+    p{
+        font-size: 15px;
+    }
+</style>
 <body>
     <Nav>
         <a href="/home"><button>Home</button></a>
@@ -30,7 +42,6 @@
     <div id="well">
 
     </div>
-
 </body>
 
 </html>
@@ -39,7 +50,6 @@
         var query = $("#clientQuery").val().trim();
 
         $.get("/clients", function (data) {
-            console.log(data);
             for (i = 0; i < data.length; i++) {
                 if (data[i].clientName == query) {
                     var searchResult = $("<div>");
@@ -55,5 +65,5 @@
                 }
             }
         })
-    })
+    });
 </script>
