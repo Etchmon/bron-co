@@ -30,7 +30,7 @@
     </div>
     <div class="clientForm">
         <p>Update Client form</p>
-        <form action="/submit" method="post">
+        <form action="/find" method="post">
             <div class="form-group">
                 <label>Name</label>
                 <input type="text" name="clientName" id="client-name">
@@ -237,7 +237,7 @@
                     $("input[name='shotList'").each(function(){
                         if($(this).val() === data[i].shotList){
                             console.log(data[i].shotList);
-                            $("input[name='shotlist'][value='" + data[i].shotList + "'").attr("checked", "checked");
+                            $("input[name='shotList'][value='" + data[i].shotList + "'").attr("checked", "checked");
                         }
                     });
 
