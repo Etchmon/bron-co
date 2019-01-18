@@ -20,9 +20,12 @@
 </style>
 
 <body>
-    <nav>
-        <h1>Home page</h1>
-    </nav>
+    <Nav>
+        <a href="/home"><button>Home</button></a>
+        <a href="/add"><button>Add Client</button></a>
+        <a href="/all"><button>All Clients</button></a>
+        <a href="/update"><button>Update a Client</button></a>
+    </Nav>
     <div id="edit">
         <p>Which Client would you like to Update?</p>
         <input type="text" class="form-group" name="editSearch" id="editSearch">
@@ -154,12 +157,12 @@
 
 </html>
 <script>
-    $("#editButton").on("click", function() {
+    $("#editButton").on("click", function () {
         var query = $("#editSearch").val().trim();
 
-        $.get("/clients", function(data){
-            for (i=0; i<data.length; i++){
-                if(data[i].clientName === query) {
+        $.get("/clients", function (data) {
+            for (i = 0; i < data.length; i++) {
+                if (data[i].clientName === query) {
                     $("#client-name").val(data[i].clientName);
                     $("#contact").val(data[i].contact);
                     $("#depositAmount").val(data[i].depositAmount);
@@ -177,107 +180,107 @@
                     $("#description9").val(data[i].description9);
                     $("#description10").val(data[i].description10);
 
-                    $("input[name='status'").each(function(){
-                        if($(this).val() === data[i].status){
+                    $("input[name='status'").each(function () {
+                        if ($(this).val() === data[i].status) {
                             console.log(data[i].status);
                             $("input[value='" + data[i].status + "'").attr("checked", "checked");
                         }
                     });
 
-                    $("input[name='brand'").each(function(){
-                        if($(this).val() === data[i].brand){
+                    $("input[name='brand'").each(function () {
+                        if ($(this).val() === data[i].brand) {
                             console.log(data[i].brand);
                             $("input[value='" + data[i].brand + "'").attr("checked", "checked");
                         }
                     });
 
-                    $("input[name='return'").each(function(){
-                        if($(this).val() === data[i].return){
+                    $("input[name='return'").each(function () {
+                        if ($(this).val() === data[i].return) {
                             console.log(data[i].return);
                             console.log($(this).val());
                             $("input[name='return'][value='" + data[i].return + "']").attr("checked", "checked");
                         }
                     });
 
-                    $("input[name='special'").each(function(){
-                        if($(this).val() === data[i].special){
+                    $("input[name='special'").each(function () {
+                        if ($(this).val() === data[i].special) {
                             console.log(data[i].special);
                             $("input[name='special'][value='" + data[i].special + "'").attr("checked", "checked");
                         }
                     });
 
-                    $("input[name='consult'").each(function(){
-                        if($(this).val() === data[i].consult){
+                    $("input[name='consult'").each(function () {
+                        if ($(this).val() === data[i].consult) {
                             console.log(data[i].consult);
                             $("input[name='consult'][value='" + data[i].consult + "'").attr("checked", "checked");
                         }
                     });
 
-                    $("input[name='scheduled'").each(function(){
-                        if($(this).val() === data[i].scheduled){
+                    $("input[name='scheduled'").each(function () {
+                        if ($(this).val() === data[i].scheduled) {
                             console.log(data[i].scheduled);
                             $("input[name='scheduled'][value='" + data[i].scheduled + "'").attr("checked", "checked");
                         }
                     });
 
-                    $("input[name='agreement'").each(function(){
-                        if($(this).val() === data[i].agreement){
+                    $("input[name='agreement'").each(function () {
+                        if ($(this).val() === data[i].agreement) {
                             console.log(data[i].agreement);
                             $("input[name='agreement'][value='" + data[i].agreement + "'").attr("checked", "checked");
                         }
                     });
 
-                    $("input[name='signed'").each(function(){
-                        if($(this).val() === data[i].signed){
+                    $("input[name='signed'").each(function () {
+                        if ($(this).val() === data[i].signed) {
                             console.log(data[i].signed);
                             $("input[name='signed'][value='" + data[i].signed + "'").attr("checked", "checked");
                         }
                     });
 
-                    $("input[name='shotList'").each(function(){
-                        if($(this).val() === data[i].shotList){
+                    $("input[name='shotList'").each(function () {
+                        if ($(this).val() === data[i].shotList) {
                             console.log(data[i].shotList);
                             $("input[name='shotList'][value='" + data[i].shotList + "'").attr("checked", "checked");
                         }
                     });
 
-                    $("input[name='rental'").each(function(){
-                        if($(this).val() === data[i].rental){
+                    $("input[name='rental'").each(function () {
+                        if ($(this).val() === data[i].rental) {
                             console.log(data[i].rental);
                             $("input[name='rental'][value='" + data[i].rental + "'").attr("checked", "checked");
                         }
                     });
 
-                    $("input[name='complete'").each(function(){
-                        if($(this).val() === data[i].complete){
+                    $("input[name='complete'").each(function () {
+                        if ($(this).val() === data[i].complete) {
                             console.log(data[i].complete);
                             $("input[name='complete'][value='" + data[i].complete + "'").attr("checked", "checked");
                         }
                     });
 
-                    $("input[name='sdhd'").each(function(){
-                        if($(this).val() === data[i].sdhd){
+                    $("input[name='sdhd'").each(function () {
+                        if ($(this).val() === data[i].sdhd) {
                             console.log(data[i].sdhd);
                             $("input[name='sdhd'][value='" + data[i].sdhd + "'").attr("checked", "checked");
                         }
                     });
 
-                    $("input[name='lr'").each(function(){
-                        if($(this).val() === data[i].lr){
+                    $("input[name='lr'").each(function () {
+                        if ($(this).val() === data[i].lr) {
                             console.log(data[i].lr);
                             $("input[name='lr'][value='" + data[i].lr + "'").attr("checked", "checked");
                         }
                     });
 
-                    $("input[name='preview'").each(function(){
-                        if($(this).val() === data[i].preview){
+                    $("input[name='preview'").each(function () {
+                        if ($(this).val() === data[i].preview) {
                             console.log(data[i].preview);
                             $("input[name='preview'][value='" + data[i].preview + "'").attr("checked", "checked");
                         }
                     });
 
-                    $("input[name='final'").each(function(){
-                        if($(this).val() === data[i].final){
+                    $("input[name='final'").each(function () {
+                        if ($(this).val() === data[i].final) {
                             console.log(data[i].final);
                             $("input[name='final'][value='" + data[i].final + "'").attr("checked", "checked");
                         }

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 <style>
@@ -21,20 +23,28 @@
         font-size: 15px;
     }
 </style>
+
 <body>
+    <Nav>
+        <a href="/home"><button>Home</button></a>
+        <a href="/add"><button>Add Client</button></a>
+        <a href="/all"><button>All Clients</button></a>
+        <a href="/update"><button>Update a Client</button></a>
+    </Nav>
     <div>
         <h1 class="header">All of your Client's</h1>
         <div id="well">
 
         </div>
     </div>
-    
+
 </body>
+
 </html>
 <script type="text/javascript">
 
-    $.get("/clients", function(data) {
-        for(i = 0; i<data.length; i++) {
+    $.get("/clients", function (data) {
+        for (i = 0; i < data.length; i++) {
             console.log(data[i]);
             console.log(data[i].clientName);
             console.log(data[i].status);

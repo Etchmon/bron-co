@@ -11,6 +11,9 @@
     <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 <style>
+    body{
+        padding: 1% 2% 2% 2%;
+    }
     .well{
         text-align: center;
     }
@@ -22,16 +25,47 @@
     p{
         font-size: 15px;
     }
+
+    Nav{
+        height: 300px;
+        width: 100%;
+        background-color:black;
+    }
+
+    .navButtons{
+        display:black;
+        position:relative;
+        float: right;
+        padding-right: 1%;
+    }
+
+    .button{
+        margin-left: .1%;
+        margin-right: .1%;
+    }
+
+    .title{
+        color:white;
+        display: inline-block;
+        text-align: center;
+        padding-top:5%;
+        padding-left: 45%;
+    }
 </style>
+
 <body>
     <Nav>
-        <a href="/home"><button>Home</button></a>
-        <a href="/add"><button>Add Client</button></a>
-        <a href="/all"><button>All Clients</button></a>
+        <div class="navButtons">
+            <a class="button" href="/home">Home</a>
+            <a class="button" href="/add">Add Client</a>
+            <a class="button" href="/all">All Clients</a>
+            <a class="button" href="/update">Update a Client</a>
+        </div>
+        <div class="title">
+            <h1>BRONCO</h1>
+            <p>Bronwyn's Client Organizer</p>
+        </div>
     </Nav>
-    <div class="welcome">
-        <h1>Welcome to your personal Client Origanizer, Bronwyn.</h1>
-    </div>
     <div class="search">
         <h2>Search a Client</h2>
         <input type="text" class="form-control" id="clientQuery" name="clientQuery">

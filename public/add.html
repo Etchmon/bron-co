@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BRONCO</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 <style>
@@ -16,10 +18,14 @@
         text-align:center;
     }
 </style>
+
 <body>
-    <nav>
-        <h1>Home page</h1>
-    </nav>
+    <Nav>
+        <a href="/home"><button>Home</button></a>
+        <a href="/add"><button>Add Client</button></a>
+        <a href="/all"><button>All Clients</button></a>
+        <a href="/update"><button>Update a Client</button></a>
+    </Nav>
     <div class="clientForm">
         <p>Client form</p>
         <form action="/submit" method="post">
@@ -31,7 +37,7 @@
             <div class="form-group">
                 <label>Status:</label><br>
                 <input type="radio" name="status" value="in-progess">in-progress<br>
-                <input type="radio" name="status" value="pending" >pending<br>
+                <input type="radio" name="status" value="pending">pending<br>
                 <input type="radio" name="status" value="incomplete">incomplete<br>
                 <input type="radio" name="status" value="complete">complete<br>
                 <input type="radio" name="status" value="subscription start">subscription start<br>
@@ -137,10 +143,11 @@
                 <input type="radio" name="final" value="no">No<br>
                 <input type="text" name="description10" id="description10"><br>
             </div>
-            
+
             <input type="submit" id="submit" value="Submit">
-        </form> 
+        </form>
     </div>
 
 </body>
+
 </html>
