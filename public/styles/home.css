@@ -1,0 +1,51 @@
+body{
+    padding: 1% 2% 2% 2%;
+}
+.well{
+    text-align: center;
+}
+
+.header{
+    text-align: center;
+}
+
+p{
+    font-size: 15px;
+}
+
+Nav{
+    height: 300px;
+    width: 100%;
+    background-color: black;
+}
+
+.navButtons{
+    display:black;
+    position:relative;
+    float: right;
+    padding-right: 1%;
+}
+
+.button{
+    margin-left: .1%;
+    margin-right: .1%;
+}
+
+.title{
+    color:white;
+    display: inline-block;
+    text-align: center;
+    padding-top:5%;
+    padding-left: 45%;
+}
+
+.well{
+    background-color:cadetblue;
+    color:white;
+    margin-left:10%;
+    margin-right: 10%;
+}
+
+#clientQuery{
+    width:20%;
+}

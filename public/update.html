@@ -8,23 +8,21 @@
     <title>BRONCO</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/update.css">
     <script src="https://code.jquery.com/jquery.js"></script>
 </head>
-<style>
-    .clientForm{
-        text-align:center;
-    }
-    nav{
-        text-align:center;
-    }
-</style>
-
 <body>
     <Nav>
-        <a href="/home"><button>Home</button></a>
-        <a href="/add"><button>Add Client</button></a>
-        <a href="/all"><button>All Clients</button></a>
-        <a href="/update"><button>Update a Client</button></a>
+        <div class="navButtons">
+            <a class="button" href="/home">Home</a>
+            <a class="button" href="/add">Add Client</a>
+            <a class="button" href="/all">All Clients</a>
+            <a class="button" href="/update">Update a Client</a>
+        </div>
+        <div class="title">
+            <h1>BRONCO</h1>
+            <p>Bronwyn's Client Organizer</p>
+        </div>
     </Nav>
     <div id="edit">
         <p>Which Client would you like to Update?</p>
