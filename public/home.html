@@ -19,16 +19,11 @@
             <a class="button" href="/all">All Clients</a>
             <a class="button" href="/update">Update a Client</a>
         </div>
-        <div class="title">
-            <h1>BRONCO</h1>
-            <p>Bronwyn's Client Organizer</p>
-        </div>
     </Nav>
-    <div class="search">
+    <div class="search container">
+        <h1>Bronwyn's Client Organizer</h1>
         <h2>Search a Client</h2>
         <input type="text" class="form-control" id="clientQuery" name="clientQuery">
-    </div>
-    <div class="button">
         <button type="submit" class="btm-primary" id="searchButton">Search</button>
     </div>
     <div id="well">
@@ -50,7 +45,7 @@
                     $("#well").append(searchResult);
 
                     $("#allWell-" + i).append("<br><h2>" + data[i].clientName + "<h2><br>" +
-                        "<p>Status: " + data[i].status + "<p><br>" + "<p>Brand or Person?: " + data[i].brand + "<p><br>" + "<p>Return Client?" + data[i].return + "<p><br>" + "<p>How was contact initiated?: " + data[i].contact + "<p><br>" + "<p>Special Offer?: " + data[i].special + "<p><br>" + "<p>description:  " + data[i].description1 + "<p><br>" + "<p>Consultation Scheduled?: " + data[i].consult + "<p><br>" + "<p>description: " + data[i].description2 + "<p><br>" + "<p>Session Scheduled?: " + data[i].scheduled + "<p><br>" + "<p>description: " + data[i].description3 + "<p><br>" + "<p>Agreement Delivered?: " + data[i].agreement + "<p><br>" + "<p>description: " + data[i].description4 + "<p><br>" + "<p>Deposit Amount Requested?: " + data[i].depositAmount + "<p><br>" + "<p>Total Price: " + data[i].totalPrice + "<p><br>" + "<p>Agreement Signed + Deposit Delivered?: " + data[i].signed + "<p><br>" + "<p>Total Payment Received by Session Date:" + data[i].totalBySessionDate + "<p><br>" + "<p>Shot list + Inspo Prep for Session?: " + data[i].shotList + "<p><br>" + "<p>description" + data[i].description5 + "<p><br>" + "<p>Lenses to Use/Rent: " + data[i].lenses + "<p><br>" + "<p>Equipment Rental?: " + data[i].rental + "<p><br>" + "<p>Session Complete?: " + data[i].complete + "<p><br>" + "<p>description: " + data[i].description6 + "<p><br>" + "<p>Photo's Moved from SD to HD?: " + data[i].sdhd + "<p><br>" + "<p>description: " + data[i].description7 + "<p><br>" + "<p>Photo's in LR?" + data[i].lr + "<p><br>" + "<p>description:" + data[i].description8 + "<p><br>" + "<p>Preview Delivered?: " + data[i].preview + "<p><br>" + "<p>description: " + data[i].description9 + "<p><br>" + "<p>Final Album Delivered?: " + data[i].final + "<p><br>" + "<p>description: " + data[i].description10);
+                        "<p>Status: <br>" + data[i].status + "<p><br>" + "<p>Brand or Person?: <br>" + data[i].brand + "<p><br>" + "<p>Return Client?<br>" + data[i].return + "<p><br>" + "<p>How was contact initiated?: <br>" + data[i].contact + "<p><br>" + "<p>Special Offer?: <br>" + data[i].special + "<p><br>" + "<p>description:  <br>" + data[i].description1 + "<p><br>" + "<p>Consultation Scheduled?: <br>" + data[i].consult + "<p><br>" + "<p>description: <br>" + data[i].description2 + "<p><br>" + "<p>Session Scheduled?: <br>" + data[i].scheduled + "<p><br>" + "<p>description: <br>" + data[i].description3 + "<p><br>" + "<p>Agreement Delivered?: <br>" + data[i].agreement + "<p><br>" + "<p>description: <br>" + data[i].description4 + "<p><br>" + "<p>Deposit Amount Requested?: <br>" + data[i].depositAmount + "<p><br>" + "<p>Total Price: <br>" + data[i].totalPrice + "<p><br>" + "<p>Agreement Signed + Deposit Delivered?: <br>" + data[i].signed + "<p><br>" + "<p>Total Payment Received by Session Date:<br>" + data[i].totalBySessionDate + "<p><br>" + "<p>Shot list + Inspo Prep for Session?: <br>" + data[i].shotList + "<p><br>" + "<p>description: <br>" + data[i].description5 + "<p><br>" + "<p>Lenses to Use/Rent: <br>" + data[i].lenses + "<p><br>" + "<p>Equipment Rental?: <br>" + data[i].rental + "<p><br>" + "<p>Session Complete?: <br>" + data[i].complete + "<p><br>" + "<p>description: <br>" + data[i].description6 + "<p><br>" + "<p>Photo's Moved from SD to HD?: <br>" + data[i].sdhd + "<p><br>" + "<p>description: <br>" + data[i].description7 + "<p><br>" + "<p>Photo's in LR?<br>" + data[i].lr + "<p><br>" + "<p>description:<br>" + data[i].description8 + "<p><br>" + "<p>Preview Delivered?: <br>" + data[i].preview + "<p><br>" + "<p>description: <br>" + data[i].description9 + "<p><br>" + "<p>Final Album Delivered?: <br>" + data[i].final + "<p><br>" + "<p>description: <br>" + data[i].description10);
                 };
             };
         });
